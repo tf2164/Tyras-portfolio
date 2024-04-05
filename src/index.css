@@ -22,20 +22,48 @@ code {
   background-color: black; 
   z-index: 999; 
   height: 18rem;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Adjust color and intensity as needed */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); 
   color: rgba(0, 255, 255, 0.5);
   border-radius: 15px;
   text-align: center;
   padding-right: 30px;
   font-size: 20px;
+
 }
+
 
 .sidebar ul li {
   padding-top: 30px; /* Adjust the value to control the spacing between list items */
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Adjust color and intensity as needed */
   /* Or */
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); 
-  
+}
+.sidebar-open {
+  right: 300px; 
+  /* transform: translateX(-20%); 
+  transition: transform 0.4s ease; */
+}
+
+.sidebar-close{
+  right: 300px; 
+ /* transform: translateX(0); 
+  transition: transform 0.4s ease; */
+}
+
+
+.sidebar-toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  /* position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px; */
 }
 
 /* DarkModeToggle.css */
@@ -92,4 +120,6 @@ input[type="checkbox"]:checked + .toggle {
 input[type="checkbox"]:checked + .toggle .slider {
   background-color: #ecf0f1;
 }
+
+
 
