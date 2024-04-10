@@ -37,7 +37,7 @@ export const projects = [
       description:
         "React Application that utilizes CSS Animations to visualize a tic tac toe game, taking it one step further with an AI opponent with difficulty selector. This shows my working knowledge of behavior trees and decision making code",
       image: "./assets/project-imgs/coffee-shop-main.png",
-      link: "https://github.com/tf2164/coffee-shop-game",
+      link: "https://tyras-coffee-shop.netlify.app/",
     },
     {
       title: "List Track",
