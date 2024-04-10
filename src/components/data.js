@@ -31,14 +31,14 @@ export const projects = [
     //   image: "./project-2.gif",
     //   link: "",
     // },
-    // {
-    //   title: "DevChat",
-    //   subtitle: "React and Firebase",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    //   image: "./project-3.gif",
-    //   link: "",
-    // },
+    {
+      title: "Coffee Shop Game",
+      subtitle: "React and AI",
+      description:
+        "React Application that utilizes CSS Animations to visualize a tic tac toe game, taking it one step further with an AI opponent with difficulty selector. This shows my working knowledge of behavior trees and decision making code",
+      image: "./assets/project-imgs/coffee-shop-main.png",
+      link: "https://github.com/tf2164/coffee-shop-game",
+    },
     {
       title: "List Track",
       subtitle: "Javascript DOM",
