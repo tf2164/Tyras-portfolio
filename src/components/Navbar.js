@@ -28,8 +28,12 @@ export default function Navbar() {
 
 
             <div className='resume-container'>
-            <a href="./assets/Tyra Fair swe intern.pdf" download className="nav-buttons">Resume<img src={installicon}></img></a>
+            {/* <a href="./assets/Tyra Fair swe intern.pdf" download className="nav-buttons">Resume<img src={installicon}></img></a> */}
             </div>
+
+            <Link className="nav-buttons" > Mobile Apps </Link>
+            <Link className="nav-buttons" > Games </Link>
+            
         </nav>
          
 

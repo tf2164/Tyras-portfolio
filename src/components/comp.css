@@ -345,5 +345,55 @@ background-image: url('../components/assets/user.png');
 
 .galleryimg{
   width: 15rem;
-  height: 15rem;
+  height: 10rem;
 }
+
+
+
+/* Skills */
+
+.skill-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+
+/* Contact */
+
+
+form input {
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  padding: 4px 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  gap-row: 15px;
+
+}
+
+.submit-button {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+

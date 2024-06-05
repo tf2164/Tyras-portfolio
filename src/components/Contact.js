@@ -70,7 +70,7 @@ export default function Contact() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="relative mb-4">
+          <div className="input">
             <label
               htmlFor="message"
               className="message-field">

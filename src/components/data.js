@@ -11,6 +11,7 @@ import sqlIcon from '../components/assets/lang-icons/sql-server.png';
 import swiftIcon from '../components/assets/lang-icons/swift.png';
 import jsIcon from '../components/assets/lang-icons/javascript.png';
 import todo from './assets/project-imgs/to-do-imh.png'
+import ticjoe from './assets/project-imgs/coffee-shop-main.png'
 
 
 
@@ -36,7 +37,7 @@ export const projects = [
       subtitle: "React and AI",
       description:
         "React Application that utilizes CSS Animations to visualize a tic tac toe game, taking it one step further with an AI opponent with difficulty selector. This shows my working knowledge of behavior trees and decision making code",
-      image: "./assets/project-imgs/coffee-shop-main.png",
+      image: ticjoe,
       link: "https://tyras-coffee-shop.netlify.app/",
     },
     {
@@ -54,7 +55,6 @@ export const projects = [
     { name: "JavaScript", image: jsIcon },
     { name: "React", image: atomIcon },
     { name: "Python", image: pythonIcon},
-    { name: "Swift", image: nodeIcon },
     { name: "SQL", image: sqlIcon },
     { name: "NodeJS", image:  nodeIcon },
     { name: "Swift", image: swiftIcon  },

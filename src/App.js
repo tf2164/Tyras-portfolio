@@ -14,6 +14,7 @@ import user from "./components/assets/user.png";
 import chat from "./components/assets/chat.png";
 import '../src/index.css';
 
+
 function App() {
   const [activeSection, setActiveSection] = useState('section1');
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
@@ -43,6 +44,8 @@ function App() {
           <DarkModeToggle />
         </div>
 
+  
+
         <div className={`navside ${isSidebarOpen ? 'visible' : 'hidden'}`}>
         <div className="sidebar">
           <ul style={{ listStyleType: 'none' }}>
@@ -53,6 +56,7 @@ function App() {
           </ul>
         </div>
       </div>
+
       <button className="sidebar-toggle-btn" onClick={toggleSidebar}>
         {isSidebarOpen ? 'Close Sidebar' : 'Open Sidebar'}
       </button>

@@ -17,7 +17,7 @@ export default function Skills() {
         <div className="">
           {skills.map((skill, index) => (
             <div key={index} className="">
-              <div className="">
+              <div className="skill-align">
               <span className="title-font" style={{ fontSize: '20px', textAlign: 'center' }}>{skill.name}</span>
                 <img src={skill.image} alt={skill.name} className="skill-image" style={{ width: '50px', height: '50px'}} />
               </div>
