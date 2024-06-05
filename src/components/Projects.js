@@ -14,9 +14,7 @@ export default function Projects() {
             Apps I've Built
           </h1>
           <p className="section-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
+            These are all projects built outside of academic responsibilities. I recreated a couple of projects from my apprenticeship with new skills.
           </p>
         </div>
         <div className="project-block">
