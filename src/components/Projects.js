@@ -11,11 +11,11 @@ export default function Projects() {
       <div className="">
         <div className="section-header">
           <h1 className="section-title">
-            Apps I've Built
+            Apps I've Built test
           </h1>
           <p className="section-description">
-            These are all projects built outside of academic responsibilities. I recreated a couple of projects from my apprenticeship with new skills.
-          </p>
+          These are all projects built outside of academic responsibilities. I recreated a couple of projects from my apprenticeship with new skills.
+           </p>
         </div>
         <div className="project-block">
           {projects.map((project) => (

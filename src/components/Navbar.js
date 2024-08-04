@@ -3,7 +3,7 @@ import './comp.css';
 import React from "react";
 import coding from "./assets/code-icon.png"
 import { Link } from 'react-scroll';
-import installicon from './assets/install-icon.png';
+// import installicon from './assets/install-icon.png';
 
 export default function Navbar() {
   return (
