@@ -5,6 +5,13 @@
   flex-wrap: nowrap;
 }
 
+#about{
+  padding: 50px 50px;
+  background: rgb(72,63,255);
+  background: linear-gradient(180deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+}
 
 #combine-slider{
 display:flex;
@@ -103,12 +110,6 @@ width: 10px;
 }
 
 
-/* .background-about {
-  height: 100vh;
-  max-width: 71rem;
-  margin: 0 auto; 
-
-} */
 
 /* @media screen and (max-width: 600px) {
   .background-about {
@@ -135,21 +136,21 @@ width: 10px;
 
      }
 
-
-
    #projects{
     margin: 0;
      /* 2 rows */
     gap: 20px; 
-    background-color: #3498db;
     padding: 5%;
-    
-
+    background: rgb(72,63,255);
+    background: linear-gradient(180deg, rgba(1,0,18,1) 0%, rgba(72,63,255,1) 50%, rgba(1,0,18,1) 100%);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
    }
 
 .project-block{
-
-      color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+      /* color: #fff; */
       padding: 20px;
       text-align: center;
       display: grid;
@@ -158,7 +159,25 @@ width: 10px;
       gap: 40px; 
 
 }
+.galleryimg{
+  width: 15rem;
+  height: 10rem;
+}
 
+
+/* #section3{
+  background: rgb(72,63,255);
+  background: linear-gradient(180deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+} */
+
+#section4{
+  display: flex;
+  height: 45rem;
+  padding: 20px;
+  background: rgb(72,63,255);
+background: linear-gradient(0deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
+}
 
 
 /* #0C0032
@@ -187,13 +206,8 @@ width: 10px;
 }
 
 
-#section4{
-  display: flex;
-  height: 45rem;
-  padding: 20px;
-  background: rgb(72,63,255);
-background: linear-gradient(0deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
-}
+
+/* Skills */
 
 #skills{
   padding: 20px;
@@ -206,30 +220,109 @@ background: linear-gradient(0deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
 
 }
 
-#contact{
+.skill-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
 
+
+
+
+/*  */
+/*  */
+/* CONTACT FORM */
+
+#contact{
   padding: 20px;
   background: rgb(72,63,255);
 background: linear-gradient(0deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
-}
-
-.resume-container{
+margin-bottom: 10px;
 
 }
 
-#about{
-  padding: 50px 50px;
-  background: rgb(72,63,255);
-  background: linear-gradient(180deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+.hiremeform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust the gap between elements */
+  height: 40rem;
+}
+
+.hiremeform h2 {
+  margin-bottom: 10px;
+}
+
+.hiremeform p {
+  margin-bottom: 20px;
+}
+
+.hiremeform div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hiremeform label {
+  margin-bottom: 5px;
+}
+
+.hiremeform input,
+.hiremeform textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hiremeform textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+form input {
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  padding: 4px 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  gap-row: 15px;
 
 }
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #08d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+/*  */
+/*  */
+
+/* CHATBOT */
+
 
 .chatbot-positioning{
 
 }
-
-
 
 .react-chatbot-kit-chat-container {
    width: 300px;
@@ -343,57 +436,5 @@ background-image: url('../components/assets/user.png');
 
 } */
 
-.galleryimg{
-  width: 15rem;
-  height: 10rem;
-}
-
-
-
-/* Skills */
-
-.skill-align{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-
-
-/* Contact */
-
-
-form input {
-  background-color: transparent;
-  border-radius: 12px;
-  border: 2px;
-  border-style: solid;
-  box-sizing: border-box;
-  color: white;
-  font-size: 18px;
-  height: 100%;
-  padding: 4px 20px 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  gap-row: 15px;
-
-}
-
-.submit-button {
-  background-color: #08d;
-  border-radius: 12px;
-  border: 0;
-  box-sizing: border-box;
-  color: #eee;
-  cursor: pointer;
-  font-size: 18px;
-  height: 50px;
-  margin-top: 38px;
-  text-align: center;
-  width: 100%;
-}
+.resume-container{}
 
