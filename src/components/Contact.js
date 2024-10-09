@@ -32,62 +32,66 @@ export default function Contact() {
 <div>
   <br></br>
   <br></br>
-        <form
-          netlify
-          name="contact"
-          onSubmit={handleSubmit}
-          className="hiremeform">
-           
-          <h2 className="main-titles section-title">
-            Let's Connect! 
-          </h2>
-          <p className="captions">
-          I'd love to hear from you! <br></br>
-          Whether you have a project in mind,
-           a question to ask,  <br></br>or just want to say hi, I'm here and eager to chat.
-          </p>
-          <div >
-            <label htmlFor="name" className="">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="">
-            <label htmlFor="email" className="l">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="input">
-            <label
-              htmlFor="message"
-              className="message-field">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className="submit-button">
-            Submit
-          </button>
-        </form>
+  <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  onSubmit={handleSubmit}
+  className="hiremeform">
+   
+  <input type="hidden" name="form-name" value="contact" />
+  
+  <h2 className="main-titles section-title">
+    Let's Connect! 
+  </h2>
+  <p className="captions">
+  I'd love to hear from you! <br></br>
+  Whether you have a project in mind,
+   a question to ask,  <br></br>or just want to say hi, I'm here and eager to chat.
+  </p>
+  <div >
+    <label htmlFor="name" className="">
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      className="w"
+      onChange={(e) => setName(e.target.value)}
+    />
+  </div>
+  <div className="">
+    <label htmlFor="email" className="l">
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      className="w-"
+      onChange={(e) => setEmail(e.target.value)}
+    />
+  </div>
+  <div className="input">
+    <label
+      htmlFor="message"
+      className="message-field">
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      onChange={(e) => setMessage(e.target.value)}
+    />
+  </div>
+  <button
+    type="submit"
+    className="submit-button">
+    Submit
+  </button>
+</form>
+
       </div>
     </section>
   );
