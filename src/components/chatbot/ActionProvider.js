@@ -1,35 +1,51 @@
 class ActionProvider {
-    constructor(createChatBotMessage, setStateFunc) {
-      this.createChatBotMessage = createChatBotMessage;
-      this.setState = setStateFunc;
-    }
-  
-    // new method
-    greet() {
-      const greetingMessage = this.createChatBotMessage("Hi, friend.");
-      this.updateChatbotState(greetingMessage);
-    }
-  
-    handleJavascriptList = () => {
-      const message = this.createChatBotMessage(
-        "Fantastic, I've got the following resources for your search",
-        {
-          widget: "javascriptLinks",
-        }
-      );
-  
-      this.updateChatbotState(message);
-    };
-  
-    updateChatbotState(message) {
-      // NOTICE: This function is set in the constructor, and is passed in from the top level Chatbot component. The setState function here actually manipulates the top level state of the Chatbot, so it's important that we make sure that we preserve the previous state.
-  
-      this.setState((prevState) => ({
-        ...prevState,
-        messages: [...prevState.messages, message],
-      }));
-    }
+  constructor(createChatBotMessage, setStateFunc) {
+    this.createChatBotMessage = createChatBotMessage;
+    this.setState = setStateFunc;
   }
-  
-  export default ActionProvider;
-  
+
+  greet() {
+    const greetingMessage = this.createChatBotMessage("Hi, friend.");
+    this.updateChatbotState(greetingMessage);
+  }
+
+  handleJavascriptList = () => {
+    const message = this.createChatBotMessage(
+      "Fantastic, I've got the following resources for your search",
+      {
+        widget: "javascriptLinks",
+      }
+    );
+    this.updateChatbotState(message);
+  };
+
+  // Add new handlers for other learning options:
+  handleReactList = () => {
+    const message = this.createChatBotMessage(
+      "Here are some great React resources for you!",
+      {
+        widget: "reactLinks",
+      }
+    );
+    this.updateChatbotState(message);
+  };
+
+  handleNodeList = () => {
+    const message = this.createChatBotMessage(
+      "Check out these Node.js resources.",
+      {
+        widget: "nodeLinks",
+      }
+    );
+    this.updateChatbotState(message);
+  };
+
+  updateChatbotState(message) {
+    this.setState((prevState) => ({
+      ...prevState,
+      messages: [...prevState.messages, message],
+    }));
+  }
+}
+
+export default ActionProvider;

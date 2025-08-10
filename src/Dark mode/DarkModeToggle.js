@@ -2,7 +2,6 @@
 import '../index.css';
 
 // DarkModeToggle.js
-import React from 'react';
 import { useDarkMode } from './DarkModeContext';
 
 

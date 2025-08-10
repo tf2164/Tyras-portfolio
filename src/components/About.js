@@ -1,49 +1,65 @@
 import './comp.css';
+import React from 'react';
+import ProfileDropdown from './profile-selector.js';
 
-import React from "react";
+export default function About({ category, onCategoryChange }) {
+  // Enable smooth scrolling for anchor links
+  React.useEffect(() => {
+    const handleClick = (e) => {
+      const href = e.target.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
 
-export default function About() {
+    const buttons = document.querySelectorAll('.nav-main-buttons a');
+    buttons.forEach(btn => btn.addEventListener('click', handleClick));
+    return () => {
+      buttons.forEach(btn => btn.removeEventListener('click', handleClick));
+    };
+  }, []);
+
   return (
-    <section id="about">
-      <div className="about-container">
-        <div className="background-about">
-        <div className="hero-img"  style={{ backgroundImage: "url(/coding.jpeg)"  }}    alt="hero">
-          <h1 className="title-font">
-            Hi, I'm Tyra
-            <br className="description" />I love to build amazing
-            apps.
-          </h1>
-          <p className="caption-hero">
-          I am a passionate and dedicated Software Engineer with significant hands-on experience gained through an impactful apprenticeship 
-          and a data-focused role at Capital One. 
-          My apprenticeship at Road to Hire provided me with a strong foundation in 
-          full stack development through six months of intensive, hands-on projects. 
-          This blend of practical experience and my educational pursuits, sets me apart from candidates who have 
-           only academic experience. My diverse skill set and proven ability to apply
-            knowledge in real-world settings make me a strong fit for an entry-level 
-            software engineering role, where I can contribute effectively and grow
-             within the team.
-          </p>
-          <br></br>
+    <div className='sections'>
+      <section id="about">
+        <div className="about-container">
+          <div className="background-about">
+            <div className="hero-img" style={{ backgroundImage: "url(/coding.jpeg)" }}>
+              <h1 className="title-font">
+                Hi, I'm Tyra
+                <br className="description" />I love to build amazing
 
-<div className="nav-main-buttons">
-            <a
-              href="#contact"
-              className="nav-main-left">
-              Work With Me
-            </a>
-            <a
-              href="#projects"
-              className="nav-main-right">
-              See My Past Work
-            </a>
+            <span className="profile-dropdown">
+                <ProfileDropdown value={category} onChange={onCategoryChange} />.
+               </span>
+              </h1>
+              <p className="caption-hero">
+                Soon-to-be Software Engineering graduate at WGU with hands-on experience in full 
+                stack development through Road to Hire and data work at Capital One. I build
+                real-world applications and, in my free time, design and develop video games 
+                that combine creativity with technical problem-solving.
+              </p>
+              <br />
+              <div className="nav-main-buttons">
+                <a
+                  href="#contact"
+                  className="nav-main-left">
+                  Work With Me
+                </a>
+                <a
+                  href="#projects"
+                  className="nav-main-right">
+                  See My Past Work
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-  
-        </div>
-
-    
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

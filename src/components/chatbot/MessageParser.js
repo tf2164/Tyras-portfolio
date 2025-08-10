@@ -5,6 +5,9 @@ class MessageParser {
     }
   
     parse(message) {
+      if (typeof message !== "string") {
+        return;
+      }
       const lowerCaseMessage = message.toLowerCase();
   
       if (lowerCaseMessage.includes("hello")) {

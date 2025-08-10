@@ -12,42 +12,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-.sidebar{
+.sidebar {
   position: fixed;
-  top: 200; 
-  right: 0; 
-  width: 170px; 
-  background-color: black; 
-  z-index: 999; 
+  top: 200px;
+  right: 0;
+  width: 170px;
+  z-index: 999;
   height: 18rem;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); 
-  color: rgba(0, 255, 255, 0.5);
-  border-radius: 15px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  color: #00ffff;
   text-align: center;
   padding-right: 30px;
   font-size: 20px;
 
 }
 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .sidebar ul li {
-  padding-top: 30px; /* Adjust the value to control the spacing between list items */
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Adjust color and intensity as needed */
-  /* Or */
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); 
+  padding-top: 30px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+box-shadow: 0 4px 24px rgba(0, 255, 255, 0.15);
+border-radius: 5px;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.sidebar ul li {
+  padding-top: 0;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 0;
+  border-radius: 10px;
+  background: rgba(0,255,255,0.08);
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: 0 2px 8px rgba(0,255,255,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 1.5px solid #00ffff;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+  background: rgba(0,255,255,0.15);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,255,255,0.25);
+  outline: none;
 }
 .sidebar-open {
   right: 300px; 
-  /* transform: translateX(-20%); 
-  transition: transform 0.4s ease; */
+
 }
 
 .sidebar-close{
   right: 300px; 
- /* transform: translateX(0); 
-  transition: transform 0.4s ease; */
+
 }
 
 
@@ -56,14 +91,7 @@ code {
   top: 10px;
   right: 10px;
   z-index: 1000;
-  /* position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 20px; */
+
 }
 
 /* DarkModeToggle.css */
@@ -77,13 +105,13 @@ code {
   height: 3rem;
 }
 
-/* Hide the default checkbox */
+
 input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
 
-/* Toggle styles */
+
 .toggle {
   display: inline-block;
   width: 60px;
@@ -94,7 +122,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* Slider styles */
+
 .slider {
   position: absolute;
   content: '';
@@ -107,7 +135,7 @@ input[type="checkbox"] {
   transition: transform 0.3s ease;
 }
 
-/* Move slider to the right for 'checked' state */
+
 input[type="checkbox"]:checked + .toggle .slider {
   transform: translateX(26px);
 }

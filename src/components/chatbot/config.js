@@ -5,18 +5,24 @@ import LearningOptions from "./LearningOptions/LearningOptions.jsx";
 import LinkList from "./LinkList/LinkList.jsx";
 
 const config = {
-  botName: "Bot",
+  botName: "Clover",
   initialMessages: [
-    createChatBotMessage("Hi, I'm here to help. What do you want to learn?", {
+    createChatBotMessage("Hi, thanks for stopping by? What do you want to learn about my creator?", {
       widget: "learningOptions",
     }),
   ],
   customStyles: {
     botMessageBox: {
       backgroundColor: "#376B7E",
+      borderRadius: "10px",
+      padding: "10px",
+      color: "#fff",
     },
     chatButton: {
       backgroundColor: "#376B7E",
+      borderRadius: "10px",
+      padding: "10px",
+      color: "#fff",
     },
   },
   widgets: [
