@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Navbar from "./components/Navbar.js";
-import { DarkModeProvider } from './Dark mode/DarkModeContext.js';
 // import DarkModeToggle from './Dark mode/DarkModeToggle';
 // import Chatbot from "react-chatbot-kit";
 // import ActionProvider from "./components/chatbot/ActionProvider";
@@ -48,7 +47,6 @@ function App() {
   
 
   return (
-    <DarkModeProvider>
       <main className="main-container">
         <div id="combine-slider">
           <Navbar />
@@ -183,8 +181,6 @@ function App() {
           </button>
         </aside> */}
       </main>
-     
-    </DarkModeProvider>
   );
 }
 
