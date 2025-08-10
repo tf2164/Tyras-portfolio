@@ -60,6 +60,10 @@
     "markdown-it": ">=12.3.2",
     "nth-check": ">=2.0.1",
     "postcss": ">=8.4.31",
-    "webpack-dev-server": "4.15.2"
+    "webpack-dev-server": "4.15.2",
+    "react-chat-widget": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
