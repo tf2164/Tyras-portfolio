@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { DarkModeProvider } from './Dark mode/DarkModeContext';
+import { DarkModeProvider } from './dark-mode/DarkModeContext';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

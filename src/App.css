@@ -2,17 +2,29 @@
   text-align: center;
 }
 
-main{
-background: rgb(2,0,36);
-background: linear-gradient(13deg, rgba(2,0,36,1) 0%, rgba(36,0,144,1) 56%, rgba(0,152,255,1) 100%);
+body {
+  background: rgb(2,0,36);
+  margin: 0;
+  padding: 0;
 }
 
-.name{
+main {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, 
+    rgba(2,0,36,1) 0%, 
+    rgba(18,0,72,1) 25%, 
+    rgba(36,0,144,1) 50%, 
+    rgba(18,0,72,1) 75%, 
+    rgba(2,0,36,1) 100%
+  );
+  min-height: 100vh;
+}
+
+.name {
   color: white;
   margin: 20px;
   display: flex;
-  wrap: nowrap;
-
+  flex-wrap: nowrap;
 }
 
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Navbar from "./components/Navbar.js";
-// import DarkModeToggle from './Dark mode/DarkModeToggle';
+// import DarkModeToggle from './dark-mode/DarkModeToggle';
 // import Chatbot from "react-chatbot-kit";
 // import ActionProvider from "./components/chatbot/ActionProvider";
 // import MessageParser from "./components/chatbot/MessageParser";
@@ -61,10 +61,13 @@ function App() {
             right: 0,
             height: '100%',
             width: '220px',
-            background: '#222',
+            background: 'linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(18,0,72,1) 50%, rgba(2,0,36,1) 100%)',
+            backdropFilter: 'blur(10px)',
             transition: 'transform 0.3s ease',
             zIndex: 1000,
-            transform: isSidebarOpen ? 'translateX(0)' : 'translateX(100%)'
+            transform: isSidebarOpen ? 'translateX(0)' : 'translateX(100%)',
+            borderLeft: '1px solid rgba(72, 63, 255, 0.3)',
+            boxShadow: '-4px 0 20px rgba(0, 0, 0, 0.5)'
           }}
         >
           <div className="sidebar">

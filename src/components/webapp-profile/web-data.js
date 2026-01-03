@@ -5,14 +5,14 @@ import documentIcon from '../assets/lang-icons/documents.png';
 import htmlIcon from '../assets/lang-icons/html.png';
 import nodeIcon from '../assets/lang-icons/nodejs.png';
 import pythonIcon from '../assets/lang-icons/python.png';
-// import cssIcon from '../assets/lang-icons/social.png';
 import sqlIcon from '../assets/lang-icons/sql-server.png';
 import swiftIcon from '../assets/lang-icons/swift.png';
 import jsIcon from '../assets/lang-icons/javascript.png';
-import todo from '../assets/project-imgs/to-do-imh.png';
 import ticjoe from '../assets/project-imgs/coffee-shop-main.png';
 import javaIcon from '../assets/lang-icons/java.png';
 import CIcon from '../assets/lang-icons/c-sharp.png';
+import multi from '../assets/project-imgs/multiplicationstation.png';
+
 
 export const webprojects = [
   {
@@ -25,14 +25,15 @@ export const webprojects = [
     link: "https://tyras-coffee-shop.netlify.app/",
   },
   {
-    title: "List Track",
-    subtitle: "List Track",
-    technologies: ["JavaScript", "DOM Manipulation", "Local JSON Storage"],
+    title: "Math Intertensive",
+    subtitle: "For real students to practice math skills",
+    technologies: ["Typescript", "Next.js", "Supabase"],
     description:
-      "Utilizing local JSON storage to save lists for easy reload. I built this project to focus on Javascript DOM manipulation.",
-    image: todo,
-    link: "https://main--list-tracker-tyra.netlify.app/",
+      "A web application designed to help students practice and improve their math skills through interactive exercises and quizzes. Built with a focus on user engagement and educational effectiveness.",
+    image: multi,
+    link: "https://multiplicationstation.com/",
   },
+
 ];
   
 export const webskills = [

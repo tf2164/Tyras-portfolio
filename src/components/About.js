@@ -38,10 +38,11 @@ export default function About({ category, onCategoryChange }) {
                </span>
               </h1>
               <p className="caption-hero">
-                Soon-to-be Software Engineering graduate at WGU with hands-on experience in full 
+                Western Governors University Software Engineering graduate with hands-on experience in full 
                 stack development through Road to Hire and data work at Capital One. I build
                 real-world applications and, in my free time, design and develop video games 
                 that combine creativity with technical problem-solving.
+
               </p>
               <br />
               <div className="nav-main-buttons">

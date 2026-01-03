@@ -17,35 +17,26 @@
 }
 
 .sections {
-
   display: flex;
   flex-direction: column;
   min-height: 45rem;
-  padding: 20px;
+  padding: 60px 20px;
   width: 100%;
   box-sizing: border-box;
-
+  margin: 0;
 
   background: linear-gradient(
     180deg,
-    rgba(1, 0, 18, 1) 0%,           /* Black top */
-    rgba(72, 63, 255, 0.95) 40%,    /* Slightly transparent blue */
-    rgba(72, 63, 255, 1) 50%,       /* Full blue center */
-    rgba(72, 63, 255, 0.95) 60%,    /* Slightly transparent blue */
-    rgba(1, 0, 18, 1) 100%          /* Black bottom */
+    rgba(2, 0, 36, 1) 0%,              /* Dark black to match main */
+    rgba(18, 0, 72, 1) 15%,            /* Dark blue fade in */
+    rgba(36, 0, 144, 0.8) 30%,         /* Medium dark blue */
+    rgba(72, 63, 255, 0.7) 50%,        /* Peak blue center */
+    rgba(36, 0, 144, 0.8) 70%,         /* Medium dark blue */
+    rgba(18, 0, 72, 1) 85%,            /* Dark blue fade out */
+    rgba(2, 0, 36, 1) 100%             /* Dark black to match main */
   );
 
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  /* display: flex;
-  min-height: 45rem;
-  padding: 20px;
-  background: rgb(72,63,255);
-  background: linear-gradient(180deg, rgba(1,0,18,1) 0%, rgba(72,63,255,1) 50%, rgba(1,0,18,1) 100%);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  height: auto;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box; */
+  box-shadow: none;
 }
 
 
@@ -400,9 +391,8 @@ background: rgb(2,0,36);
 #skills{
   padding: 60px 20px;
   color: white;
-  background: rgb(72,63,255);
-  background: linear-gradient(180deg, rgba(1,0,18,1) 0%, rgba(72,63,255,1) 50%, rgba(1,0,18,1) 100%);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  background: transparent;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -489,9 +479,16 @@ background: rgb(2,0,36);
 }
 
  #section3{
-  background: rgb(72,63,255);
-  background: linear-gradient(180deg, rgba(72,63,255,1) 55%, rgba(1,0,18,1) 100%);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  background: linear-gradient(180deg, 
+    rgba(2, 0, 36, 1) 0%,
+    rgba(18, 0, 72, 1) 15%,
+    rgba(36, 0, 144, 0.8) 30%,
+    rgba(72, 63, 255, 0.7) 50%,
+    rgba(36, 0, 144, 0.8) 70%,
+    rgba(18, 0, 72, 1) 85%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  box-shadow: none;
 }
 
 /* End of Section 3 skills styling */
