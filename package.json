@@ -25,7 +25,6 @@
     "react-chat-widget": "^3.1.4",
     "react-chatbot-kit": "^2.2.2",
     "react-dom": "^19.2.3",
-    "react-scripts": "^0.0.0",
     "react-scroll": "^1.9.3",
     "web-vitals": "^5.1.0"
   },
@@ -54,7 +53,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "eslint-plugin-jest": "^29.11.2"
+    "eslint": "^8.57.0",
+    "eslint-plugin-jest": "^29.11.2",
+    "react-scripts": "^5.0.1"
   },
   "overrides": {
     "markdown-it": ">=12.3.2",
