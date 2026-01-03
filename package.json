@@ -25,7 +25,7 @@
     "react-chat-widget": "^3.1.4",
     "react-chatbot-kit": "^2.2.2",
     "react-dom": "^19.1.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^0.0.0",
     "react-scroll": "^1.9.3",
     "web-vitals": "^5.1.0"
   },
