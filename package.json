@@ -21,10 +21,10 @@
     "@testing-library/user-event": "^14.6.1",
     "eslint-webpack-plugin": "^5.0.2",
     "joi": "^18.0.0",
-    "react": "^19.1.1",
+    "react": "^19.2.3",
     "react-chat-widget": "^3.1.4",
     "react-chatbot-kit": "^2.2.2",
-    "react-dom": "^19.1.1",
+    "react-dom": "^19.2.3",
     "react-scripts": "^0.0.0",
     "react-scroll": "^1.9.3",
     "web-vitals": "^5.1.0"
