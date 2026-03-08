@@ -39,10 +39,6 @@ function App() {
   //   setIsChatbotOpen(!isChatbotOpen);
   // };
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen((prev) => !prev);
-  };
-
   const projectsByCategory = {
     web: <WebProjects />,
     mobile: <MobileProjects />,
