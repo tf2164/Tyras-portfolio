@@ -1,13 +1,11 @@
 // src/data.js
 import '../comp.css';
 
-
-import documentIcon from '../assets/lang-icons/documents.png';
-
-import ticjoe from '../assets/project-imgs/coffee-shop-main.png'
-
-
-
+import prim from '../assets/project-imgs/Prim.png';
+import unityIcon from '../assets/lang-icons/unityicon.png';
+import CIcon from '../assets/lang-icons/c-sharp.png';
+import blender from '../assets/lang-icons/blendlogo.png';
+import flappy from '../assets/project-imgs/flappybird.jpg';
 
 export const gameprojects = [
     // {
@@ -27,18 +25,49 @@ export const gameprojects = [
     //   link: "",
     // },
         {
-      title: "Coffee Shop Game",
-      subtitle: "Coffee Shop Game",
-      technologies: ["React", "AI", "CSS Animations"],
+      title: "Primrose",
+      subtitle: "Work in Progress",
+      technologies: ["Unity", "C#", "Blender"],
       description:
-        "React Application that utilizes CSS Animations to visualize a tic tac toe game, taking it one step further with an AI opponent with difficulty selector. This shows my working knowledge of behavior trees and decision making code.",
-      image: ticjoe,
-      link: "https://tyras-coffee-shop.netlify.app/",
+        "A cozy crafting game focused on atmosphere, exploration, and handcrafted interactions.",
+      image: prim,
+      link: "",
+      hideLiveLink: true,
+      developmentStage: "Prototype / Vertical Slice",
+      timelineProjection: "Targeting a first playable demo in Q3 2026.",
+      milestone: "Building the core loop and environment pipeline.",
+      plannedPlatforms: ["PC", "Consoles"],
+      buildNotes: [
+         "Building a modular character customization system with interchangeable assets.",
+       "Creating low-poly stylized assets in Blender and integrating them into Unity,",
+        "Iterating on the core gameplay loop to ensure it feels engaging and satisfying.",
+      ],
+      // gallery: [prim],
     },
+    {
+      title: "Flappy Bird Clone",
+      subtitle: "Work in Progress",
+      technologies: ["Unity", "C#"],
+      description:
+        "A faithful recreation of the classic Flappy Bird game, built to learn Unity and C#.",
+      image: flappy,
+      link: "https://example.com/flappy-bird-clone",
+      hideLiveLink: true,
+      // developmentStage: "Completed",
+      // timelineProjection: "Completed in Q1 2024.",
+      // milestone: "Successfully recreated the core mechanics and polished the gameplay.",
+      plannedPlatforms: ["Web"],  
+      buildNotes: [
+        "Creating for learning purposes, this project helped me understand Unity's physics system and C# scripting.",
+      ],
+    }
 
   ];
 
   export const gameskills = [
 
-    { name: "Technical Documentation", image: documentIcon }
+    { name: "Unity", image: unityIcon },
+    { name: "C#", image: CIcon
+     },
+     { name: "Blender", image: blender}
   ];

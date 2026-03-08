@@ -38,25 +38,14 @@ export default function About({ category, onCategoryChange }) {
                </span>
               </h1>
               <p className="caption-hero">
-                Western Governors University Software Engineering graduate with hands-on experience in full 
+                Recent Western Governors University Software Engineering graduate with hands-on experience in full 
                 stack development through Road to Hire and data work at Capital One. I build
                 real-world applications and, in my free time, design and develop video games 
                 that combine creativity with technical problem-solving.
 
               </p>
               <br />
-              <div className="nav-main-buttons">
-                <a
-                  href="#contact"
-                  className="nav-main-left">
-                  Work With Me
-                </a>
-                <a
-                  href="#projects"
-                  className="nav-main-right">
-                  See My Past Work
-                </a>
-              </div>
+    
             </div>
           </div>
         </div>

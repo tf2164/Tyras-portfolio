@@ -7,7 +7,7 @@ export default function ProfileDropdown({ value = 'web', onChange }) {
     const displayOptions = [
         { value: 'web', label: 'Web Apps' },
         // { value: 'mobile', label: 'Mobile Apps' },
-        // { value: 'games', label: 'Games' },
+        { value: 'games', label: 'Games' },
     ];
 
     const selectedDisplay = displayOptions.find(opt => opt.value === value);

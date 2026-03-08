@@ -1,0 +1,44 @@
+/* Dedicated override layer for yellow skills theme */
+
+.bento-skills {
+  background: #f9d371 !important;
+  border-color: rgba(133, 96, 20, 0.55) !important;
+}
+
+.bento-skills .skills-theme-yellow #skills,
+.bento-skills .skills-theme-yellow .skills-container {
+  background: transparent !important;
+}
+
+.bento-skills .skills-theme-yellow .skills-title,
+.bento-skills .skills-theme-yellow .skills-description,
+.bento-skills .skills-theme-yellow .skill-simple-name,
+.bento-skills .skills-theme-yellow .section-title,
+.bento-skills .skills-theme-yellow .section-description {
+  color: #2c1f3f !important;
+}
+
+.bento-skills .skills-theme-yellow .skills-description {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.bento-skills .skills-theme-yellow .skills-header {
+  margin-bottom: 1.2rem;
+}
+
+.bento-skills .skills-theme-yellow .skills-simple-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem;
+}
+
+.bento-skills .skills-theme-yellow .skill-simple-item {
+  padding: 0.35rem 0.3rem;
+}
+
+@media (max-width: 640px) {
+  .bento-skills .skills-theme-yellow .skills-simple-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.8rem;
+  }
+}

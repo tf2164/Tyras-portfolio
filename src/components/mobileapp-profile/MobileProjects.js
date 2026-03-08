@@ -39,7 +39,7 @@ export default function MobileProjects() {
                       {project.technologies.join(' · ')}
                     </p>
                     <p style={{ margin: '0.2rem 0', color: '#f5f5f5' }}>
-                      {project.description} <span style={{ fontWeight: '600', color: '#00ffff' }}>[View Project →]</span>
+                      {project.description} <span style={{ fontWeight: '600', color: '#CEE24B' }}>[View Project →]</span>
                     </p>
                   </div>
                 </div>
