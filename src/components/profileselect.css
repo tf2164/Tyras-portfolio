@@ -2,6 +2,7 @@
 .profile-dropdown {
     display: inline-block;
     position: relative;
+    z-index: 2100;
     vertical-align: baseline;
     font-size: inherit;
     min-width: 0;
@@ -82,7 +83,7 @@
     top: 110%;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 2200;
 }
 
 .profile-dropdown-list-container--closed {
@@ -170,5 +171,5 @@
 .profile-dropdown-overlay {
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: 2050;
 }

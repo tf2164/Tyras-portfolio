@@ -1,29 +1,29 @@
 import '../comp.css';
 
-import atomIcon from '../assets/lang-icons/atom.png';
-import documentIcon from '../assets/lang-icons/documents.png';
-import htmlIcon from '../assets/lang-icons/html.png';
-import nodeIcon from '../assets/lang-icons/nodejs.png';
-import pythonIcon from '../assets/lang-icons/python.png';
-import sqlIcon from '../assets/lang-icons/sql-server.png';
-import swiftIcon from '../assets/lang-icons/swift.png';
-import jsIcon from '../assets/lang-icons/javascript.png';
-import ticjoe from '../assets/project-imgs/coffee-shop-main.png';
-import javaIcon from '../assets/lang-icons/java.png';
-import CIcon from '../assets/lang-icons/c-sharp.png';
-import multi from '../assets/project-imgs/multiplicationstation.png';
+import atomIcon from '../assets/lang-icons/Web/atom.png';
+import documentIcon from '../assets/lang-icons/Web/documents.png';
+import htmlIcon from '../assets/lang-icons/Web/html.png';
+import nodeIcon from '../assets/lang-icons/Web/nodejs.png';
+import pythonIcon from '../assets/lang-icons/Web/python.png';
+import sqlIcon from '../assets/lang-icons/Web/sql-server.png';
+import swiftIcon from '../assets/lang-icons/Web/swift.png';
+import jsIcon from '../assets/lang-icons/Web/javascript.png';
 
+import javaIcon from '../assets/lang-icons/Web/java.png';
+import CIcon from '../assets/lang-icons/Web/c-sharp.png';
+import multi from '../assets/project-imgs/multiplication.png';
+import spotify from '../assets/project-imgs/SpotifyAPI.png';
 
 export const webprojects = [
-  {
-    title: "Coffee Shop Game",
-    subtitle: "Coffee Shop Game",
-    technologies: ["React", "AI", "CSS Animations"],
-    description:
-      "React Application that utilizes CSS Animations to visualize a tic tac toe game, taking it one step further with an AI opponent with difficulty selector. This shows my working knowledge of behavior trees and decision making code.",
-    image: ticjoe,
-    link: "https://tyras-coffee-shop.netlify.app/",
-  },
+  // {
+  //   title: "",
+  //   subtitle: "",
+  //   technologies: ["React", "AI", "CSS Animations"],
+  //   description:
+  //     "",
+  //   image: ticjoe,
+  //   link: "",
+  // },
   {
     title: "Math Intertensive",
     subtitle: "For real students to practice math skills",
@@ -33,6 +33,19 @@ export const webprojects = [
     image: multi,
     link: "https://multiplicationstation.com/",
   },
+
+    {
+    title: "Current Spotify Wrapped",
+    subtitle: "Used Spotify's API to create a web app that presents a user's current top artists and tracks.",
+    technologies: ["API", "React Vite", "Typescript"],
+    description:
+      "A web application that connects to the Spotify API to retrieve and display a user's current top artists and tracks. The app provides an interactive interface for users to explore their music preferences and discover new content based on their listening habits.",
+    image: spotify,
+    link: "https://spotifyapi-ctdream.netlify.app/",
+  },
+
+
+
 
 ];
   

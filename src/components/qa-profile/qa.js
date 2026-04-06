@@ -1,9 +1,9 @@
 // src/components/Projects.js
 import '../comp.css';
-import { mobileprojects } from "./mobile-data";
+import QAProjects from "./qa-data";
 import { useState } from "react";
 
-export default function MobileProjects() {
+export default function QAportfolio() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
@@ -13,14 +13,14 @@ export default function MobileProjects() {
       <section id="projects">
         <div className="project-block">
           <div className="section-header" style={{ marginBottom: "2.5rem" }}>
-            <h1 className="section-title">Mobile Apps I've Built</h1>
+            <h1 className="section-title">Caution: Builds in Progress...</h1>
             <p style={{ color: "#d0d0d0", maxWidth: "560px", margin: "0.75rem auto 0", lineHeight: "1.6" }}>
-              These are all projects built outside of academic responsibilities. I recreated a couple of projects from my apprenticeship with new skills.
+             QA projects. 
             </p>
           </div>
 
           <div className="wp-list">
-            {mobileprojects.map((project, i) => {
+            {QAProjects.map((project, i) => {
               const isOpen = openIndex === i;
               const hasLiveLink = Boolean(project.link) && !project.hideLiveLink;
 
@@ -61,7 +61,7 @@ export default function MobileProjects() {
                           <polyline points="15 3 21 3 21 9"/>
                           <line x1="10" y1="14" x2="21" y2="3"/>
                         </svg>
-                        View Project
+                        View Github
                       </a>
                     ) : (
                       <span className="wp-link-btn wp-link-disabled" onClick={(e) => e.stopPropagation()}>
@@ -109,34 +109,34 @@ export default function MobileProjects() {
                             </div>
                           </div>
 
-                          {(project.mobileFocus || project.appStoreTarget || project.releaseTimeline) && (
+                          {(project.developmentStage || project.timelineProjection || project.milestone) && (
                             <div className="wp-meta-grid">
-                              {project.mobileFocus && (
+                              {project.developmentStage && (
                                 <div className="wp-meta-card">
-                                  <span className="wp-detail-label">Mobile Focus</span>
-                                  <p className="wp-meta-value">{project.mobileFocus}</p>
+                                  <span className="wp-detail-label">Stage</span>
+                                  <p className="wp-meta-value">{project.developmentStage}</p>
                                 </div>
                               )}
-                              {project.appStoreTarget && (
+                              {project.timelineProjection && (
                                 <div className="wp-meta-card">
-                                  <span className="wp-detail-label">Store Target</span>
-                                  <p className="wp-meta-value">{project.appStoreTarget}</p>
+                                  <span className="wp-detail-label">Timeline</span>
+                                  <p className="wp-meta-value">{project.timelineProjection}</p>
                                 </div>
                               )}
-                              {project.releaseTimeline && (
+                              {project.milestone && (
                                 <div className="wp-meta-card">
-                                  <span className="wp-detail-label">Release Timeline</span>
-                                  <p className="wp-meta-value">{project.releaseTimeline}</p>
+                                  <span className="wp-detail-label">Current Milestone</span>
+                                  <p className="wp-meta-value">{project.milestone}</p>
                                 </div>
                               )}
                             </div>
                           )}
 
-                          {Array.isArray(project.mobilePlatforms) && project.mobilePlatforms.length > 0 && (
+                          {Array.isArray(project.plannedPlatforms) && project.plannedPlatforms.length > 0 && (
                             <div className="wp-detail-block">
-                              <span className="wp-detail-label">Mobile Platforms</span>
+                              <span className="wp-detail-label">Planned Platforms</span>
                               <div className="wp-tech-pills">
-                                {project.mobilePlatforms.map((platform) => (
+                                {project.plannedPlatforms.map((platform) => (
                                   <span key={platform} className="wp-pill">{platform}</span>
                                 ))}
                               </div>
@@ -145,7 +145,7 @@ export default function MobileProjects() {
 
                           {Array.isArray(project.buildNotes) && project.buildNotes.length > 0 && (
                             <div className="wp-detail-block">
-                              <span className="wp-detail-label">Mobile Dev Notes</span>
+                              <span className="wp-detail-label">Dev Notes</span>
                               <ul className="wp-notes-list">
                                 {project.buildNotes.map((note) => (
                                   <li key={note}>{note}</li>
@@ -157,6 +157,14 @@ export default function MobileProjects() {
                           <div className="wp-detail-block">
                             <span className="wp-detail-label">Links</span>
                             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="wp-link-btn wp-link-primary">
+                                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                  </svg>
+                                 Project Documentation
+                                </a>
                               {hasLiveLink ? (
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="wp-link-btn wp-link-primary">
                                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -164,7 +172,7 @@ export default function MobileProjects() {
                                     <polyline points="15 3 21 3 21 9"/>
                                     <line x1="10" y1="14" x2="21" y2="3"/>
                                   </svg>
-                                  View Live
+                                  View Github
                                 </a>
                               ) : (
                                 <span className="wp-link-btn wp-link-disabled">No live build yet</span>
@@ -175,13 +183,13 @@ export default function MobileProjects() {
 
                         {Array.isArray(project.gallery) && project.gallery.length > 0 && (
                           <div className="wp-gallery-block">
-                            <span className="wp-detail-label">Mobile Screens</span>
+                            <span className="wp-detail-label">Progress Gallery</span>
                             <div className="wp-gallery-grid">
                               {project.gallery.map((imgSrc, idx) => (
                                 <img
                                   key={`${project.title}-gallery-${idx}`}
                                   src={imgSrc}
-                                  alt={`${project.title} mobile screen ${idx + 1}`}
+                                  alt={`${project.title} progress ${idx + 1}`}
                                   className="wp-gallery-thumb"
                                 />
                               ))}

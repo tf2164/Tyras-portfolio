@@ -2,10 +2,11 @@
 import '../comp.css';
 
 import prim from '../assets/project-imgs/Prim.png';
-import unityIcon from '../assets/lang-icons/unityicon.png';
-import CIcon from '../assets/lang-icons/c-sharp.png';
-import blender from '../assets/lang-icons/blendlogo.png';
+import unityIcon from '../assets/lang-icons/Games/unityicon.png';
+import CIcon from '../assets/lang-icons/Web/c-sharp.png';
+import blender from '../assets/lang-icons/Games/blendlogo.png';
 import flappy from '../assets/project-imgs/flappybird.jpg';
+import dungeoncat from '../assets/project-imgs/dungeon.png';
 
 export const gameprojects = [
     // {
@@ -60,7 +61,25 @@ export const gameprojects = [
       buildNotes: [
         "Creating for learning purposes, this project helped me understand Unity's physics system and C# scripting.",
       ],
+    },
+        {
+      title: "Cat Dungeon Crawler",
+      subtitle: "Work in Progress",
+      technologies: ["FlowLab", "Visual Scripting"],
+      description:
+        "A quick platformer game built in Flowlab to learn game design principles and rapid prototyping.",
+      image: dungeoncat,
+      link: "https://flowlab.io/game/play/3013538",
+      hideLiveLink: false,
+      // developmentStage: "Completed",
+      // timelineProjection: "Completed in Q1 2024.",
+      // milestone: "Successfully recreated the core mechanics and polished the gameplay.",
+      plannedPlatforms: ["Web"],  
+      buildNotes: [
+        "Creating for learning purposes, this project helped me understand game design principles and rapid prototyping using visual scripting in Flowlab.",
+      ],
     }
+
 
   ];
 

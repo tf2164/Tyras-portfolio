@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import About from "./components/About.js";
 import Navbar from "./components/Navbar.js";
 import './App.css';
@@ -16,16 +16,70 @@ import GameProjects from './components/games-profile/Games';
 import WebSkills from './components/webapp-profile/WebSkills';
 import MobileSkills from './components/mobileapp-profile/MobileSkills';
 import GameSkills from './components/games-profile/GameSkills';
+import QASkills from './components/qa-profile/qaSkills';
+import QAPortfolio from './components/qa-profile/qa'; 
 
 
+
+const VALID_CATEGORIES = ['web', 'mobile', 'games', 'qa'];
+
+const normalizeCategory = (value) => {
+  if (!value) {
+    return null;
+  }
+
+  const normalized = String(value).trim().toLowerCase();
+  return VALID_CATEGORIES.includes(normalized) ? normalized : null;
+};
+
+const getCategoryFromUrl = () => {
+  const params = new URLSearchParams(window.location.search);
+  const fromQuery = normalizeCategory(params.get('profile'));
+  if (fromQuery) {
+    return fromQuery;
+  }
+
+  const hashValue = window.location.hash.replace(/^#\/?/, '');
+  const fromHash = normalizeCategory(hashValue);
+  if (fromHash) {
+    return fromHash;
+  }
+
+  const pathSegment = window.location.pathname.split('/').filter(Boolean).pop();
+  return normalizeCategory(pathSegment) || 'web';
+};
+
+const writeCategoryToUrl = (category) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set('profile', category);
+  window.history.replaceState({}, '', `${url.pathname}?${url.searchParams.toString()}${url.hash}`);
+};
 function App() {
 
-  const [category, setCategory] = useState('web');
-
+  const [category, setCategory] = useState(() => getCategoryFromUrl());
   const [activeSection, setActiveSection] = useState('section2');
   // const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+
+  const handleCategoryChange = useCallback((nextCategory) => {
+    const normalized = normalizeCategory(nextCategory) || 'web';
+    setCategory(normalized);
+    writeCategoryToUrl(normalized);
+  }, []);
+
+  useEffect(() => {
+    writeCategoryToUrl(category);
+  }, [category]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCategory(getCategoryFromUrl());
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
   const handleNavigation = (sectionId) => {
     setActiveSection(sectionId);
     const section = document.getElementById(sectionId);
@@ -43,12 +97,14 @@ function App() {
     web: <WebProjects />,
     mobile: <MobileProjects />,
     games: <GameProjects />,
+    qa: <QAPortfolio />
   };
 
   const skillsByCategory = {
     web: <WebSkills />,
     mobile: <MobileSkills />,
     games: <GameSkills />,
+    qa: <QASkills />
   };
 
   const getCardClass = (sectionId, baseClass) => (
@@ -115,15 +171,15 @@ function App() {
       <div className={`content ${isSidebarOpen ? 'is-shifted' : ''}`}>
         <div className="bento-layout">
           <section id="section1" className={getCardClass('section1', 'bento-about')}>
-            <About category={category} onCategoryChange={setCategory} />
+            <About category={category} onCategoryChange={handleCategoryChange} />
           </section>
 
           <section id="section2" className={getCardClass('section2', 'bento-projects')}>
-            {projectsByCategory[category]}
+            {projectsByCategory[category] || projectsByCategory.web}
           </section>
 
           <section id="section3" className={getCardClass('section3', 'bento-skills')}>
-            {skillsByCategory[category]}
+            {skillsByCategory[category] || skillsByCategory.web}
           </section>
         </div>
       </div>

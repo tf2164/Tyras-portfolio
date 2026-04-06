@@ -33,7 +33,7 @@ export default function About({ category, onCategoryChange }) {
                 Hi, I'm Tyra
                 <br className="description" />I love to build amazing
 
-            <span className="profile-dropdown">
+            <span>
                 <ProfileDropdown value={category} onChange={onCategoryChange} />.
                </span>
               </h1>

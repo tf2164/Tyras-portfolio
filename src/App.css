@@ -28,6 +28,7 @@ body {
   background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 100%);
   min-height: 100vh;
   overflow-x: hidden;
+  font-size: 1.06rem;
 }
 
 .main-container::before,
@@ -74,7 +75,7 @@ body {
 }
 
 .bento-layout {
-  max-width: 1480px;
+  max-width: 1300px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -215,6 +216,9 @@ body {
 .bento-about {
   background: rgba(138, 106, 216, 0.34);
   border-color: rgba(138, 106, 216, 0.62);
+  position: relative;
+  z-index: 80;
+  overflow: visible;
 }
 
 .bento-about .sections,
@@ -222,6 +226,7 @@ body {
 .bento-about .about-container,
 .bento-about .background-about {
   height: 100%;
+  overflow: visible;
 }
 
 .bento-about #about {
@@ -231,6 +236,7 @@ body {
 .bento-about .hero-img {
   height: 100%;
   min-height: 0;
+  overflow: visible;
   padding: clamp(1rem, 2vw, 1.5rem) clamp(1.2rem, 2.4vw, 2rem);
   display: flex;
   flex-direction: column;

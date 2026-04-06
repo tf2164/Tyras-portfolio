@@ -3,14 +3,18 @@ import './profileselect.css';
 
 export default function ProfileDropdown({ value = 'web', onChange }) {
     const [open, setOpen] = React.useState(false);
+    const normalizedValue = String(value).toLowerCase();
 
     const displayOptions = [
         { value: 'web', label: 'Web Apps' },
-        // { value: 'mobile', label: 'Mobile Apps' },
+        { value: 'qa', label: 'QA' },
         { value: 'games', label: 'Games' },
+        { value: 'mobile', label: 'Mobile Apps' },
+
+        
     ];
 
-    const selectedDisplay = displayOptions.find(opt => opt.value === value);
+    const selectedDisplay = displayOptions.find(opt => opt.value === normalizedValue);
 
     return (
         <div className="profile-dropdown">
@@ -44,18 +48,18 @@ export default function ProfileDropdown({ value = 'web', onChange }) {
                         <li
                             key={opt.value}
                             role="option"
-                            aria-selected={opt.value === value}
+                            aria-selected={opt.value === normalizedValue}
                             onClick={() => {
                                 onChange(opt.value);
                                 setOpen(false);
                             }}
-                            className={`profile-dropdown-item ${opt.value === value ? 'profile-dropdown-item--selected' : 'profile-dropdown-item--unselected'}`}
+                            className={`profile-dropdown-item ${opt.value === normalizedValue ? 'profile-dropdown-item--selected' : 'profile-dropdown-item--unselected'}`}
                             onMouseDown={e => e.preventDefault()}
                         >
-                            <span className={`profile-dropdown-item-text ${opt.value === value ? 'profile-dropdown-item-text--selected' : 'profile-dropdown-item-text--unselected'}`}>
+                            <span className={`profile-dropdown-item-text ${opt.value === normalizedValue ? 'profile-dropdown-item-text--selected' : 'profile-dropdown-item-text--unselected'}`}>
                                 {opt.label}
                             </span>
-                            {opt.value === value && (
+                            {opt.value === normalizedValue && (
                                 <span
                                     className="profile-dropdown-checkmark"
                                     aria-hidden="true"
