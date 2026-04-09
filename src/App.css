@@ -119,6 +119,109 @@ body {
   grid-row: 1 / span 11;
 }
 
+.bento-contact {
+  grid-column: 1 / span 12;
+  grid-row: auto;
+  --contact-fill: #d8835e;
+  background: var(--contact-fill);
+  border-color: rgba(206, 226, 75, 0.88);
+  box-shadow: 0 14px 28px rgba(29, 11, 43, 0.36);
+}
+
+.bento-contact > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: clamp(1.2rem, 2vw, 1.85rem);
+  text-align: left;
+}
+
+.bento-contact label {
+  color: #fff8e9;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.bento-contact input,
+.bento-contact textarea {
+  width: 100%;
+  border: 1px solid rgba(247, 240, 254, 0.68);
+  border-radius: 12px;
+  background: rgba(43, 17, 56, 0.62);
+  color: #fff8f1;
+  padding: 0.8rem 0.3rem;
+  box-sizing: border-box;
+  font-size: 0.96rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.bento-contact input {
+  height: 42px;
+  padding: 0.5rem 0.82rem;
+}
+
+
+.bento-contact textarea {
+  resize: vertical;
+  min-height: 73px;
+  padding: 0.5rem 0.82rem;
+  line-height: 1.45;
+}
+
+.bento-contact input::placeholder,
+.bento-contact textarea::placeholder {
+  color: rgba(247, 240, 254, 0.7);
+}
+
+.bento-contact input:focus,
+.bento-contact textarea:focus {
+  outline: none;
+  border-color: #cee24b;
+  background: rgba(43, 17, 56, 0.8);
+  box-shadow: 0 0 0 3px rgba(206, 226, 75, 0.24);
+}
+
+.bento-contact button[type='submit'] {
+  align-self: flex-start;
+  border: 1px solid rgba(247, 240, 254, 0.4);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f0cd7f 0%, #cee24b 100%);
+  color: #371b2f;
+  padding: 0.72rem 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.bento-contact button[type='submit']:hover,
+.bento-contact button[type='submit']:focus-visible {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 1px 2px rgba(47, 16, 34, 0.28);
+  outline: none;
+}
+
+.bento-contact button[type='submit']:disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.bento-contact .validation-error,
+.bento-contact p {
+  margin: 0;
+  color: #fff6df;
+  font-size: 0.9rem;
+}
+
+.bento-contact p {
+  padding: 1.45rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .bento-card .sections {
   min-height: auto;
   padding: 0;
@@ -436,6 +539,10 @@ body {
   .bento-skills {
     grid-column: span 4;
     grid-row: auto;
+  }
+
+  .bento-contact {
+    grid-column: 1 / span 12;
   }
 }
 

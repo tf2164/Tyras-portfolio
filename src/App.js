@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import About from "./components/About.js";
 import Navbar from "./components/Navbar.js";
 import './App.css';
+
 // import DarkModeToggle from './dark-mode/DarkModeToggle';
 // import Chatbot from "react-chatbot-kit";
 // import ActionProvider from "./components/chatbot/ActionProvider";
@@ -10,6 +11,7 @@ import './App.css';
 // import user from "./components/assets/user.png";
 // import chat from "./components/assets/chat.png";
 
+import ContactForm from './components/contactForm.jsx';
 import WebProjects from './components/webapp-profile/WebProjects';
 import MobileProjects from './components/mobileapp-profile/MobileProjects';
 import GameProjects from './components/games-profile/Games';
@@ -55,6 +57,7 @@ const writeCategoryToUrl = (category) => {
   window.history.replaceState({}, '', `${url.pathname}?${url.searchParams.toString()}${url.hash}`);
 };
 function App() {
+
 
   const [category, setCategory] = useState(() => getCategoryFromUrl());
   const [activeSection, setActiveSection] = useState('section2');
@@ -181,8 +184,16 @@ function App() {
           <section id="section3" className={getCardClass('section3', 'bento-skills')}>
             {skillsByCategory[category] || skillsByCategory.web}
           </section>
+
+          <section id="section4" className={getCardClass('section4', 'bento-contact')}>
+            <ContactForm />
+          </section>
+
+
         </div>
       </div>
+
+  
 
       {/* <aside className='chatbot-positioning'>
         {isChatbotOpen && (
